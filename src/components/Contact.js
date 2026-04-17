@@ -10,15 +10,16 @@ const Contact = () => {
         {/* section title */}
         <div className="flex flex-col items-center text-center">
           <h2 className="section-title before:content-contact relative before:absolute before:opacity-40 before:-top-7 before:-left-40 before:hidden before:lg:block">
-            Contact Me
+            Connect With Me
           </h2>
           <p className="subtitle">
-            Kalau Ibu, Bapak dan Teman-teman semua memerlukan tenaga tech
-            silahkan hubungi saya
+            Whether you have a question about a project, a collaboration
+            proposal, or just want to say hi, my inbox is always open.
           </p>
         </div>
+
         <div className="flex flex-col lg:gap-x-8 lg:flex-row">
-          {/*info  */}
+          {/* info */}
           <div className="flex flex-1 flex-col items-start space-y-8 mb-12 lg:mb-0 lg:pt-2">
             {contact.map((item, index) => {
               const { icon, title, subtitle, description } = item;
@@ -29,28 +30,45 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-body text-xl mb-1">{title}</h4>
-                    <p className="mb-1">{subtitle}</p>
-                    <p className="text-accent font-normal">{description}</p>
+                    <p className="mb-1 text-paragraph">{subtitle}</p>
+                    <p className="text-accent font-medium">{description}</p>
                   </div>
                 </div>
               );
             })}
           </div>
+
           {/* form */}
-          <form className="space-y-8 w-full max-w-[780px]">
-            <div className="flex gap-8">
-              <input className="input" type="text" placeholder="Your name" />
-              <input className="input" type="text" placeholder="Your email" />
+          <form
+            className="space-y-8 w-full max-w-[780px]"
+            onSubmit={(e) => e.preventDefault()}>
+            <div className="flex flex-col md:flex-row gap-8">
+              <input
+                className="input"
+                type="text"
+                placeholder="Your name"
+                required
+              />
+              <input
+                className="input"
+                type="email"
+                placeholder="Your email"
+                required
+              />
             </div>
-            <input type="text" className="input" placeholder="Subject" />
+            <input
+              type="text"
+              className="input"
+              placeholder="Subject"
+              required
+            />
             <textarea
               className="textarea"
               placeholder="Your Message"
-            ></textarea>
+              required></textarea>
             <button
               type="submit"
-              className="btn btn-lg bg-accent hover:bg-accent-hover rounded-xl"
-            >
+              className="btn btn-lg bg-accent hover:bg-accent-hover rounded-sm transition-all px-10">
               Send Message
             </button>
           </form>

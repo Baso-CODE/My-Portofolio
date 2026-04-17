@@ -1,47 +1,56 @@
 //  icons
 import {
-  FiYoutube,
-  FiInstagram,
   FiGithub,
-  FiDribbble,
+  FiInstagram,
   FiLayout,
-  FiSettings,
-  FiPenTool,
-  FiTag,
+  FiLinkedin,
   FiMail,
   FiMapPin,
-  FiLinkedin,
+  FiSettings,
+  FiYoutube,
 } from "react-icons/fi";
-
+// services
+import { FiServer, FiTrendingUp } from "react-icons/fi";
 // companies icons
-import FreelancerBrandIcon from "./assets/img/brands/freelancer.png";
-import UpworkBrandIcon from "./assets/img/brands/upwork.png";
-import FiverBrandIcon from "./assets/img/brands/fiverr.png";
 import BehanceBrandIcon from "./assets/img/brands/behance.png";
 import DribbbleBrandIcon from "./assets/img/brands/dribbble.png";
+import FiverBrandIcon from "./assets/img/brands/fiverr.png";
+import FreelancerBrandIcon from "./assets/img/brands/freelancer.png";
+import UpworkBrandIcon from "./assets/img/brands/upwork.png";
 
 // projects images
-import Project1 from "./assets/img/projects/p1.webp";
-import Project2 from "./assets/img/projects/p2.webp";
+// -- EDUMATRIX --
+import akademiASN from "./assets/img/projects/edumatrix/akademi-asn.png";
+import akademiOSN from "./assets/img/projects/edumatrix/akademi-osn.png";
+import allEdumatrix from "./assets/img/projects/edumatrix/all-website-edumatrix.png";
+import EO1 from "./assets/img/projects/edumatrix/event-orgainazer-1.jpg";
+import EO2 from "./assets/img/projects/edumatrix/event-orgainazer-2.jpg";
+import EO3 from "./assets/img/projects/edumatrix/event-orgainazer-3.jpg";
+import SEOEdm from "./assets/img/projects/edumatrix/seo-edumatrix-indonesia.png";
+
+// -- GOENAKAN ID -- //
+import goenakan_Project1 from "./assets/img/projects/goenakan-id/goenakan-project-1.png";
+import goenakan_Project2 from "./assets/img/projects/goenakan-id/goenakan-project-2.png";
+import goenakan_Project3 from "./assets/img/projects/goenakan-id/goenakan-project-3.png";
+
 import Project3 from "./assets/img/projects/p3.webp";
 import Project4 from "./assets/img/projects/p4.webp";
 import Project5 from "./assets/img/projects/p5.webp";
 import Project6 from "./assets/img/projects/p6.webp";
 
 // skills images
-import SkillImg1 from "./assets/img/skills/html5.png";
 import SkillImg2 from "./assets/img/skills/css3.png";
+import SkillImg8 from "./assets/img/skills/figma.png";
+import SkillImg7 from "./assets/img/skills/git.png";
+import SkillImg1 from "./assets/img/skills/html5.png";
 import SkillImg3 from "./assets/img/skills/js.png";
-import SkillImg4 from "./assets/img/skills/reactjs.png";
 import SkillImg5 from "./assets/img/skills/nextjs.png";
 import SkillImg6 from "./assets/img/skills/nodejs.png";
-import SkillImg7 from "./assets/img/skills/git.png";
-import SkillImg8 from "./assets/img/skills/figma.png";
+import SkillImg4 from "./assets/img/skills/reactjs.png";
 
 // testimonial images
-import TestiImage1 from "./assets/img/testimonials/testimonial-1.webp";
 import TestiImage2 from "./assets/img/testimonials/testimonial-2.webp";
-import TestiImage3 from "./assets/img/testimonials/testimonial-3.webp";
+import TestiImage1 from "./assets/img/testimonials/testimonial-mas-tegar.jpeg";
 
 // navigation
 export const navigation = [
@@ -118,57 +127,164 @@ export const brands = [
 // projects
 export const projectsData = [
   {
-    id: "1",
-    image: Project1,
-    name: "Make a Music compiler",
-    category: "UI/UX design",
+    id: "edumatrix-fullstack-seo",
+    image: allEdumatrix,
+    name: "Edumatrix Indonesia Platform",
+    category: "full stack",
+    links: [
+      { name: "Main Website", url: "https://edumatrix-indonesia.com" },
+      {
+        name: "WEb Les Privat Masuk PTN",
+        url: "https://bimbelsupercamp.com/",
+      },
+      {
+        name: "Web Marketing OSN",
+        url: "https://akademiosn.com/",
+      },
+      {
+        name: "Bimbel Akademi ASN",
+        url: "https://akademi-asn.com/",
+      },
+    ],
+    description:
+      "A dual-role contribution as a Full-Stack Developer and SEO Specialist for Edumatrix Indonesia, building a high-performance rating system and scaling organic traffic through technical optimization.",
+
+    screenshots: [SEOEdm, akademiASN, akademiOSN],
+
+    // Detail pekerjaan untuk SEO
+    seoWork: [
+      "Developed and implemented comprehensive SEO strategies to enhance website visibility and rankings.",
+      "Conducted in-depth keyword research and competitor analysis using tools like Ahrefs, SEMrush, and Google Keyword Planner.",
+      "Optimized on-page elements (meta descriptions, titles, internal linking) and off-page site authority.",
+      "Monitored performance via Google Analytics and Search Console to resolve indexing and crawling issues.",
+      "Proven track record of achieving first-page keyword rankings on Google.",
+    ],
+
+    // Detail pekerjaan untuk Fullstack
+    devWork: [
+      "Built the Edumatrix Indonesia Rating web app from scratch using Next.js, TypeScript, and Node.js.",
+      "Integrated MySQL databases using Prisma ORM for efficient data management and optimized queries.",
+      "Implemented responsive and aesthetic UI layouts with Tailwind CSS.",
+      "Engineered secure RESTful APIs with JWT (JSON Web Tokens) for user authentication.",
+      "Collaborated with cross-functional teams to ensure fast-loading websites optimized for both performance and SEO.",
+    ],
   },
   {
-    id: "2",
-    image: Project2,
-    name: "Beautiful me",
-    category: "web development",
+    id: "event-logistics-coordinator",
+    image: EO2,
+    name: "Event Logistics & Management System",
+    category: "management system",
+    description:
+      "Strategic coordination and digital management for Edumatrix's intensive learning programs, overseeing logistics, facilities, and resource distribution for hundreds of participants to ensure seamless operational execution.",
+
+    links: [
+      {
+        name: "Edumatrix Program",
+        url: "https://edumatrix-indonesia.com/program",
+      },
+    ],
+
+    // Foto-foto kegiatan (foto saat koordinasi, foto logistik, atau foto peserta)
+    screenshots: [
+      EO1,
+      EO2,
+      EO3,
+      // Tambahkan import foto kegiatan lainnya di sini
+    ],
+
+    // Detail tanggung jawab sebagai Coordinator
+    managementWork: [
+      "Designed and managed full-scale operational support for month-long intensive learning programs.",
+      "Oversaw the end-to-end distribution of learning materials, facilities, and technical equipment for over 100+ participants.",
+      "Acted as the primary bridge between teaching staff and the operational team to resolve on-site technical and logistical issues.",
+      "Maintained strict project timelines, ensuring all schedules and program activities were executed with 100% punctuality.",
+      "Optimized team efficiency which resulted in minimal logistics-related complaints and high participant satisfaction ratings.",
+    ],
+
+    // Sisi teknis (jika kamu menggunakan tools digital untuk mengaturnya)
+    technicalTools: [
+      "Utilized digital tracking systems to monitor inventory and equipment availability in real-time.",
+      "Implemented structured reporting workflows to evaluate daily program progress.",
+      "Coordinated cross-functional teams using collaborative project management tools.",
+    ],
   },
   {
-    id: "3",
+    id: "goenakan-ecommerce",
+    image: goenakan_Project1,
+    name: "Goenakan E-Commerce Platform",
+    category: "full stack",
+    description:
+      "A full-featured mini e-commerce platform designed to empower local businesses. This project involved building a robust frontend for users, a custom CMS for content management, and an integrated logistics tracking system.",
+
+    // Link yang relevan dengan Goenakan
+    links: [{ name: "Goenakan Indonesia", url: "https://goenakan.id" }],
+
+    // Masukkan screenshot mockup laptop/HP untuk e-commerce ini
+    screenshots: [
+      goenakan_Project1,
+      goenakan_Project2,
+      goenakan_Project3,
+      // Tambahkan import foto Dashboard Admin atau Fitur Tracking di sini
+    ],
+
+    // Detail pekerjaan Fullstack untuk Goenakan
+    devWork: [
+      "Developed and maintained a full-featured mini e-commerce platform, overseeing both frontend user interface and backend system architecture.",
+      "Built a custom Content Management System (CMS) from scratch to manage dynamic website content, ensuring flexibility for future updates.",
+      "Engineered a comprehensive Internal Admin Dashboard to streamline operations, including product management, order processing, and sales analytics.",
+      "Integrated a real-time logistics tracking system to monitor shipment status and improve supply chain visibility for internal teams.",
+      "Designed and optimized MySQL databases to ensure data integrity and high performance for e-commerce and sales transactions.",
+    ],
+
+    // Skill teknis yang menonjol di proyek ini
+    technicalTools: [
+      "Custom CMS Architecture",
+      "Real-time Logistics API Integration",
+      "Admin Dashboard Analytics",
+      "Database Optimization & Schema Design",
+      "Responsive E-Commerce UI",
+    ],
+  },
+  {
+    id: "property-rating-platform",
     image: Project3,
-    name: "Marble Component",
-    category: "UI/UX design",
+    name: "Property Rating Platform",
+    category: "web development",
+    description:
+      "Led a team to build a responsive property rating app using Next.js, TypeScript, and Tailwind CSS.",
   },
   {
-    id: "4",
+    id: "internal-admin-dashboard",
     image: Project4,
-    name: "Clean In Home",
-    category: "branding",
+    name: "Internal Admin Dashboard",
+    category: "cms & admin",
+    description:
+      "Engineered a dashboard to streamline product management, order processing, and sales analytics.",
   },
   {
-    id: "5",
+    id: "event-organizer-app",
     image: Project5,
-    name: "Kokain SignatureMe",
+    name: "Event Organizer Web App",
     category: "web development",
+    description:
+      "Interactive web application with robust frontend features, ensuring seamless user experience across devices.",
   },
   {
-    id: "6",
+    id: "dynamic-cms-system",
     image: Project6,
-    name: "Realme SmartWatch",
-    category: "web development",
+    name: "Dynamic CMS System",
+    category: "cms & admin",
+    description:
+      "Built a custom Content Management System (CMS) to manage dynamic website content flexibly.",
   },
 ];
 
 // projects
 export const projectsNav = [
-  {
-    name: "all",
-  },
-  {
-    name: "UI/UX Design",
-  },
-  {
-    name: "web development",
-  },
-  {
-    name: "branding",
-  },
+  { name: "all" },
+  { name: "full stack" },
+  { name: "web development" },
+  { name: "cms & admin" },
 ];
 
 // skill
@@ -199,31 +315,30 @@ export const skills = [
   },
 ];
 
-// services
 export const services = [
   {
     icon: <FiLayout />,
-    name: "Web Design",
+    name: "Full-Stack Web Development",
     description:
-      "I am a passionate and creative web designer with a primary focus on creating engaging and intuitive user experiences. I love combining modern design elements, smart colors and precise typography to create a strong visual identity that matches a client's vision and goals.",
+      "Building responsive, high-performance web applications from the ground up utilizing modern technologies such as Next.js, TypeScript, and Tailwind CSS to deliver optimal user experiences.",
+  },
+  {
+    icon: <FiServer />,
+    name: "Backend & API Development",
+    description:
+      "Designing scalable system architectures, developing secure RESTful APIs with Node.js & Express.js, and optimizing MySQL databases using ORMs like Prisma to ensure data integrity.",
   },
   {
     icon: <FiSettings />,
-    name: "Web Development",
+    name: "Custom CMS & E-Commerce",
     description:
-      "With a strong understanding of programming languages and web frameworks, I am able to design and develop responsive and functional websites. My desire to continuously learn and keep up with technological developments helps me stay relevant in the world",
+      "Developing tailored business solutions, including dynamic Content Management Systems (CMS), internal admin dashboards, and e-commerce platforms with real-time integration.",
   },
   {
-    icon: <FiPenTool />,
-    name: "Branding",
+    icon: <FiTrendingUp />,
+    name: "SEO Optimization",
     description:
-      "I am a branding specialist committed to helping brands discover and define their identity in memorable ways. With expertise in branding strategy and visual design, I strive to create strong and cohesive narratives for brands.",
-  },
-  {
-    icon: <FiTag />,
-    name: "SEO",
-    description:
-      "I am a dedicated and visionary Chief Executive Officer (CEO), leading the company with strategic vision and strong leadership. With a background in business management and corporate strategy, I lead teams toward goal achievement and sustainable growth.",
+      "Enhancing digital visibility and organic traffic through comprehensive On-Page and Off-Page SEO strategies, technical site optimization, and in-depth data analytics.",
   },
 ];
 
@@ -232,38 +347,32 @@ export const testimonials = [
   {
     authorImg: TestiImage1,
     authorText:
-      "The branding expert we collaborated with demonstrated a deep understanding of our brand essence. Their strategic approach to branding not only revitalized our visual identity but also created a compelling narrative that resonated with our target audience. ",
-    authorName: "Olivia Doe",
-    authorPosition: "Head of Design, Google",
+      "Baso played a crucial role in building the core application for our business. His ability to understand our complex operational needs and translate them into a fast, scalable, and intuitive digital solution was outstanding. He is not just a developer, but a strategic partner who genuinely cares about the product's success. Highly recommended for any technical challenges.",
+    authorName: "Tegar Itmamul Wafa",
+    authorPosition: "CEO & Head of Technology, Arsana Integra Construction",
   },
   {
-    authorImg: TestiImage2,
+    authorImg: TestiImage2, // Nanti kamu ganti dengan foto rekan/manajer lain
     authorText:
-      "The web design services provided were truly exceptional. The designer demonstrated a keen eye for aesthetics, creating a visually stunning and user-friendly website. The attention to detail and responsiveness across various devices exceeded our expectations. ",
-    authorName: "Olivia Doe",
-    authorPosition: "Head of Design, Meta",
-  },
-  {
-    authorImg: TestiImage3,
-    authorText:
-      "The web developer exhibited exceptional technical skills and a profound understanding of web development frameworks. Their ability to translate complex ideas into functional, user-friendly websites was remarkable. ",
-    authorName: "Olivia Doe",
-    authorPosition: "Head of software Engginer, Amazon",
+      "Working with Baso has been an incredible experience. He seamlessly handled both the frontend and backend of our platform, ensuring high performance and data security. His collaborative approach, combined with his deep technical expertise in Next.js and system architecture, significantly accelerated our project delivery. He is an asset to any development team.",
+    authorName: "Budi Santoso", // Ganti dengan nama asli (misal dari tim Edumatrix atau Goenakan)
+    authorPosition: "Project Manager, Edumatrix Group", // Ganti dengan posisi asli
   },
 ];
 
 // contact
+
 export const contact = [
   {
     icon: <FiMail />,
     title: "Have a question?",
-    subtitle: "I am here to help you.",
-    description: "Email me at basoafrizamuhafriza@gmail.com",
+    subtitle: "I am here to help you build your vision.",
+    description: "basoafrizamuhafriza@gmail.com",
   },
   {
     icon: <FiMapPin />,
     title: "Current Location",
-    subtitle: "Makassar , Indonesia",
-    description: "Serving clients worldwide",
+    subtitle: "Yogyakarta, Indonesia",
+    description: "Ready for global collaboration",
   },
 ];

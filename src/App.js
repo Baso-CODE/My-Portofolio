@@ -1,30 +1,42 @@
-import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 // import components
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Brands from "./components/Brands";
 import About from "./components/About";
-import Skills from "./components/Skills";
-import Portofolio from "./components/Portofolio";
-import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
+import BackToTopBtn from "./components/BackToTopBtn";
+import Brands from "./components/Brands";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import BackToTopBtn from "./components/BackToTopBtn";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Portofolio from "./components/Portofolio";
+import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Testimonials from "./components/Testimonials";
+import ProjectDetails from "./pages/ProjectDetails";
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Hero />
-      <Brands />
-      <About />
-      <Skills />
-      <Portofolio />
-      <Services />
-      <Testimonials />
-      <Contact />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <Hero />
+              <Brands />
+              <About />
+              <Skills />
+              <Portofolio />
+              <Services />
+              <Testimonials />
+              <Contact />
+            </div>
+          }
+        />
+
+        <Route path="/project/:id" element={<ProjectDetails />} />
+      </Routes>
       <Footer />
       <BackToTopBtn />
     </div>
