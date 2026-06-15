@@ -10,11 +10,16 @@ const Header = () => {
   const [bg, setBg] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      return window.scrollY > 50 ? setBg(true) : setBg(false);
-    });
-  });
+    const handleScroll = () => {
+      setBg(window.scrollY > 50);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <header
       className={`${
