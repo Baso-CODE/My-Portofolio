@@ -1,9 +1,33 @@
-import React from "react";
-
 // import contact data
 import { contact } from "../data";
 
 const Contact = () => {
+  const sendToWhatsApp = (e) => {
+    e.preventDefault();
+
+    // Mengambil data dari form
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+
+    // Nomor WA kamu (ganti angka 0 di depan dengan 62)
+    const phoneNumber = "6285241902604";
+
+    // Merangkai isi pesan
+    const textMessage = `Hello Baso,\n\nMy name is ${name} (${email}).\n\nSubject: ${subject}\n\nMessage:\n${message}`;
+
+    // Mengubah teks menjadi format URL (agar enter dan spasi terbaca di WA)
+    const encodedText = encodeURIComponent(textMessage);
+
+    // Membuat link WhatsApp API
+    const waUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+    // Membuka tab baru yang mengarah ke WhatsApp
+    window.open(waUrl, "_blank");
+  };
+
   return (
     <section className="section bg-primary" id="contact">
       <div className="container mx-auto">
@@ -41,17 +65,19 @@ const Contact = () => {
           {/* form */}
           <form
             className="space-y-8 w-full max-w-[780px]"
-            onSubmit={(e) => e.preventDefault()}>
+            onSubmit={sendToWhatsApp}>
             <div className="flex flex-col md:flex-row gap-8">
               <input
                 className="input"
                 type="text"
+                name="name" // WAJIB ADA
                 placeholder="Your name"
                 required
               />
               <input
                 className="input"
                 type="email"
+                name="email" // WAJIB ADA
                 placeholder="Your email"
                 required
               />
@@ -59,11 +85,13 @@ const Contact = () => {
             <input
               type="text"
               className="input"
+              name="subject" // WAJIB ADA
               placeholder="Subject"
               required
             />
             <textarea
               className="textarea"
+              name="message" // WAJIB ADA
               placeholder="Your Message"
               required></textarea>
             <button

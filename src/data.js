@@ -33,10 +33,12 @@ import goenakan_Project1 from "./assets/img/projects/goenakan-id/goenakan-projec
 import goenakan_Project2 from "./assets/img/projects/goenakan-id/goenakan-project-2.png";
 import goenakan_Project3 from "./assets/img/projects/goenakan-id/goenakan-project-3.png";
 
-import Project3 from "./assets/img/projects/p3.webp";
-import Project4 from "./assets/img/projects/p4.webp";
-import Project5 from "./assets/img/projects/p5.webp";
-import Project6 from "./assets/img/projects/p6.webp";
+import Project7 from "./assets/img/projects/edumatrix/admin-dashboard-success-story.png";
+import Project4 from "./assets/img/projects/edumatrix/internal-admin-dashboard-edumatrix.png";
+import Project5 from "./assets/img/projects/edumatrix/login-admin-dashboard.png";
+import Project6 from "./assets/img/projects/edumatrix/SEO-project-1.png";
+import Project8 from "./assets/img/projects/edumatrix/SEO-project-2.png";
+import Project9 from "./assets/img/projects/edumatrix/SEO-project-3.png";
 
 // skills images
 import SkillImg2 from "./assets/img/skills/css3.png";
@@ -49,7 +51,8 @@ import SkillImg6 from "./assets/img/skills/nodejs.png";
 import SkillImg4 from "./assets/img/skills/reactjs.png";
 
 // testimonial images
-import TestiImage2 from "./assets/img/testimonials/testimonial-2.webp";
+import TestiImage3 from "./assets/img/testimonials/testimonial-ceo-goenakan-id.jpeg";
+import TestiImage2 from "./assets/img/testimonials/testimonial-dimas.PNG";
 import TestiImage1 from "./assets/img/testimonials/testimonial-mas-tegar.jpeg";
 
 // navigation
@@ -96,7 +99,7 @@ export const social = [
   },
   {
     icon: <FiLinkedin />,
-    href: "https://www.linkedin.com/in/baso-muh-afriza-8a1963282/",
+    href: "https://www.linkedin.com/in/baso-muh/",
   },
 ];
 
@@ -245,37 +248,78 @@ export const projectsData = [
       "Responsive E-Commerce UI",
     ],
   },
-  {
-    id: "property-rating-platform",
-    image: Project3,
-    name: "Property Rating Platform",
-    category: "web development",
-    description:
-      "Led a team to build a responsive property rating app using Next.js, TypeScript, and Tailwind CSS.",
-  },
+
   {
     id: "internal-admin-dashboard",
-    image: Project4,
-    name: "Internal Admin Dashboard",
+    image: Project4, // Ganti dengan variabel gambar utama dasbor adminmu
+    name: "Internal Management & CMS Dashboard",
     category: "cms & admin",
     description:
-      "Engineered a dashboard to streamline product management, order processing, and sales analytics.",
+      "A secure and comprehensive admin dashboard designed to streamline internal business operations. This system handles secure user authentication, dynamic content management for the public website, and complex backend operations including vendor management, order cashflow, and logistics tracking.",
+
+    // Link opsional (jika dasbor ini bisa diakses publik/ada reponya)
+
+    // Masukkan screenshot mockup halaman admin di sini
+    screenshots: [
+      Project4,
+      Project5,
+      Project7,
+      // admin_Logistics, // Contoh gambar halaman logistik
+      // admin_Auth // Contoh gambar halaman Auth
+    ],
+
+    // Detail pekerjaan Fullstack untuk Admin Dashboard
+    devWork: [
+      "Implemented a robust authentication system (Auth) to ensure secure access and role-based permissions for internal staff.",
+      "Engineered a dynamic Content Management System (CMS) allowing administrators to easily update website content such as CS contacts, client testimonials, and success stories without touching code.",
+      "Developed comprehensive modules for business operations, including vendor management, order cashflow tracking, and client delivery oversight.",
+      "Streamlined goods receipt and logistics workflows, providing a centralized platform for the internal team to monitor the entire supply chain.",
+      "Designed an intuitive and responsive admin user interface to ensure high productivity and ease of use for non-technical team members.",
+    ],
+
+    // Skill teknis yang menonjol di proyek ini
+    technicalTools: [
+      "Secure User Authentication (Auth)",
+      "Dynamic CMS Integration",
+      "Role-Based Access Control (RBAC)",
+      "Logistics & Vendor Management",
+      "Cashflow & Order Analytics",
+    ],
   },
+
   {
-    id: "event-organizer-app",
-    image: Project5,
-    name: "Event Organizer Web App",
-    category: "web development",
+    id: "seo-cms-platform",
+    image: Project6, // Ganti dengan gambar utama (misal: grafik trafik naik atau halaman depan web)
+    name: "High-Performance SEO Platform & CMS",
+    category: "SEO",
     description:
-      "Interactive web application with robust frontend features, ensuring seamless user experience across devices.",
-  },
-  {
-    id: "dynamic-cms-system",
-    image: Project6,
-    name: "Dynamic CMS System",
-    category: "cms & admin",
-    description:
-      "Built a custom Content Management System (CMS) to manage dynamic website content flexibly.",
+      "Engineered a dynamic Content Management System (CMS) perfectly integrated with advanced technical SEO strategies. This platform empowers copywriting teams to easily manage content while securing first-page Google rankings and significantly driving organic traffic growth.",
+
+    // Masukkan variabel gambar screenshot di sini
+    screenshots: [
+      Project6,
+      Project8,
+      Project9,
+      // seo_Analytics // (Gambar grafik GSC/Analytics)
+    ],
+
+    // Detail pekerjaan sesuai dengan pengalaman SEO Specialist
+    devWork: [
+      "Developed and implemented comprehensive technical SEO strategies to dramatically enhance website visibility and search engine indexing.",
+      "Built a custom, user-friendly CMS that allows content teams to easily optimize on-page SEO elements (meta descriptions, titles, internal linking).",
+      "Conducted in-depth keyword research and competitor analysis using tools like Ahrefs, SEMrush, and Google Keyword Planner to capture high-potential traffic.",
+      "Proactively monitored site health, resolving technical issues affecting crawling, and analyzed performance metrics via Google Analytics and Search Console.",
+      "Successfully achieved consistent first-page Google rankings for highly competitive localized keywords (e.g., in Makassar and South Jakarta).",
+    ],
+
+    // Skill teknis yang menonjol di proyek ini
+    technicalTools: [
+      "Technical SEO & Core Web Vitals",
+      "Google Search Console & Analytics",
+      "Ahrefs & SEMrush",
+      "Keyword Research & On-Page SEO",
+      "Dynamic CMS Architecture",
+    ],
   },
 ];
 
@@ -283,8 +327,9 @@ export const projectsData = [
 export const projectsNav = [
   { name: "all" },
   { name: "full stack" },
-  { name: "web development" },
+  { name: "management system" },
   { name: "cms & admin" },
+  { name: "SEO" },
 ];
 
 // skill
@@ -352,11 +397,19 @@ export const testimonials = [
     authorPosition: "CEO & Head of Technology, Arsana Integra Construction",
   },
   {
-    authorImg: TestiImage2, // Nanti kamu ganti dengan foto rekan/manajer lain
+    authorImg: TestiImage2,
     authorText:
-      "Working with Baso has been an incredible experience. He seamlessly handled both the frontend and backend of our platform, ensuring high performance and data security. His collaborative approach, combined with his deep technical expertise in Next.js and system architecture, significantly accelerated our project delivery. He is an asset to any development team.",
-    authorName: "Budi Santoso", // Ganti dengan nama asli (misal dari tim Edumatrix atau Goenakan)
-    authorPosition: "Project Manager, Edumatrix Group", // Ganti dengan posisi asli
+      "Working alongside Baso at Edumatrix has been a good experience. As a fellow developer, I highly value his ability to bridge complex backend CMS logic with front-end technical SEO optimization. He played a crucial role in building our custom admin dashboards and high-converting landing pages. Baso is a proactive team player who consistently brings efficient, clean-code solutions to our daily challenges. Collaborating with him is always a seamless and highly productive process.",
+    authorName: "Dimas Maulana",
+    authorPosition: "Full Stack Web Developer, Edumatrix Group",
+  },
+  {
+    authorImg: TestiImage3,
+    authorText:
+      "Working with Baso was a game-changer for Goenakan Indonesia. He successfully engineered both our client-facing mini e-commerce website and a robust internal management system. His solution completely streamlined our complex operations—seamlessly handling vendor management, logistics tracking, order cashflow, and client deliveries. His technical expertise and collaborative approach significantly accelerated our project delivery. He is a tremendous asset to any development team.",
+    authorName: "Nadya Yuniar Desi Prameswari",
+    authorPosition:
+      "Digital Marketing Strategist | Co-Founder of Goenakan Indonesia",
   },
 ];
 

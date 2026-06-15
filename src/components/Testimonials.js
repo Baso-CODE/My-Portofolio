@@ -1,5 +1,3 @@
-import React from "react";
-
 import TestimonialSlider from "../components/TestimonialSlider";
 
 const Testimonials = () => {
@@ -9,14 +7,14 @@ const Testimonials = () => {
         <div className="flex flex-col items-center text-center ">
           <h2
             className=" section-title before:content-testimonials relative before:absolute before:opacity-40 before:-top-[2rem]
-           before:-left-64 before:hidden before:lg:block"
-          >
-            What Other people say?
+           before:-left-64 before:hidden before:lg:block">
+            What Other People Say
           </h2>
           <p className="subtitle">
-            I am a software engineer studying at Purwadika digital technology
-            school, with my skills and knowledge can I be part of your big
-            project.
+            With over three years of experience as a Full-Stack Web Developer, I
+            combine technical precision with creative strategy to deliver
+            impactful digital solutions. Here is what my clients and colleagues
+            have to say about our collaborations.
           </p>
         </div>
         <TestimonialSlider />

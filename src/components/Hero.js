@@ -1,30 +1,36 @@
 import WomanImg from "../assets/img/fototitit.png";
+
 const Hero = () => {
   // Format Link WhatsApp
   const waNumber = "6285241902604";
   const waMessage =
     "Hello Baso! I saw your portfolio and I am interested in connecting with you.";
-  const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
+  const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(
+    waMessage,
+  )}`;
 
   return (
     <section
       id="home"
-      className="section h-screen lg:h-[80vh] flex items-center bg-primary">
-      <div className="container mx-auto">
-        {/* Menggunakan grid untuk membagi 2 sisi di layar besar (lg:grid-cols-2) */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+      // Mengganti h-screen dengan min-h-screen dan menambah padding atas/bawah untuk mobile
+      className="section min-h-screen lg:min-h-[80vh] flex items-center bg-primary pt-28 pb-12 lg:pt-0 lg:pb-0">
+      {/* Menambah px-4 agar konten tidak menempel rapat di pinggir layar HP */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12">
           {/* --- SISI KIRI (TEKS & TOMBOL) --- */}
           <div className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-            <p className="text-paragraph text-lg mb-3 font-body">
+            <p className="text-paragraph text-base sm:text-lg mb-3 font-body">
               Hello, I'm Baso Afriza
             </p>
 
-            <h1 className="text-4xl lg:text-6xl font-primary font-bold text-white mb-6 leading-tight max-w-[600px]">
+            {/* Menyesuaikan ukuran font H1 agar tidak terlalu besar di HP (text-4xl) */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-primary font-bold text-white mb-6 leading-tight max-w-[600px]">
               Building <span className="text-accent">Impactful</span> Digital
               Experiences.
             </h1>
 
-            <p className="subtitle mb-10 max-w-[500px]">
+            {/* Menambahkan padding horizontal (px-2) khusus di HP agar paragraf lebih rapi */}
+            <p className="subtitle mb-8 lg:mb-10 max-w-[500px] text-sm sm:text-base lg:text-lg px-2 lg:px-0">
               I am a Full-Stack Developer & SEO Specialist passionate about
               crafting scalable, user-centric applications. Driven by curiosity
               and a highly collaborative mindset, I am eager to innovate and
@@ -36,7 +42,7 @@ const Hero = () => {
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-md bg-accent hover:bg-accent-hover text-white flex items-center justify-center gap-2 transition-all w-fit">
+              className="btn btn-md sm:btn-lg bg-accent hover:bg-accent-hover text-white flex items-center justify-center gap-2 transition-all w-fit px-6 sm:px-8 py-3 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -50,11 +56,12 @@ const Hero = () => {
           </div>
 
           {/* --- SISI KANAN (GAMBAR) --- */}
-          <div className="flex-1 w-full flex justify-center lg:justify-end mt-10 lg:mt-0 -mb-10">
+          {/* Menghapus negative margin di bawah gambar dan mengatur ulang persentase lebarnya */}
+          <div className="flex-1 w-full flex justify-center lg:justify-end mt-12 lg:mt-0">
             <img
               src={WomanImg}
               alt="Baso Afriza"
-              className="w-full max-w-[400px] lg:max-w-[500px] object-cover"
+              className="w-[80%] sm:w-[60%] lg:w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] object-cover drop-shadow-xl"
             />
           </div>
         </div>
