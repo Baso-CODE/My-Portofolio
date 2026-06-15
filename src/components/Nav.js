@@ -1,5 +1,3 @@
-import React from "react";
-
 // import navigation data
 import { navigation } from "../data";
 
@@ -14,8 +12,7 @@ const Nav = () => {
           return (
             <li
               className="text-white hover:text-accent cursor-pointer"
-              key={index}
-            >
+              key={index}>
               <Link
                 to={item.href}
                 activeClass="active"
@@ -23,8 +20,7 @@ const Nav = () => {
                 smooth={true}
                 duration={500}
                 offset={-70}
-                className="transition-all duration-300"
-              >
+                className="transition-all duration-300">
                 {item.name}
               </Link>
             </li>

@@ -1,5 +1,3 @@
-import React from "react";
-
 // import skills data
 import { skills } from "../data";
 

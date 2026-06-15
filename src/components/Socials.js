@@ -1,5 +1,3 @@
-import React from "react";
-
 // import social data
 import { social } from "../data";
 
@@ -10,11 +8,9 @@ const Socials = () => {
         return (
           <li
             className="flex justify-center items-center text-accent"
-            key={index}
-          >
+            key={index}>
             <a className="text-base" href={item.href}>
               {item.icon}
-              
             </a>
           </li>
         );

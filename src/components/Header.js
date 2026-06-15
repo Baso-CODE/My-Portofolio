@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // import components
 
@@ -19,8 +19,7 @@ const Header = () => {
     <header
       className={`${
         bg ? "bg-tertiary h-20" : "h-24"
-      } flex items-center fixed top-0 w-full text-white z-10 transition-all duration-300`}
-    >
+      } flex items-center fixed top-0 w-full text-white z-10 transition-all duration-300`}>
       <div className="container mx-auto h-full flex items-center justify-between">
         {/* logo */}
         <a href="#">
@@ -38,8 +37,7 @@ const Header = () => {
         {/* Nav mobile */}
         <div
           className=" lg:hidden
-        "
-        >
+        ">
           <NavMobile />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // import Projects Data
 import { projectsData } from "../data";
@@ -43,8 +43,7 @@ const Projects = () => {
                 className={`${
                   active === index ? "active" : ""
                 } cursor-pointer capitalize m-4 `}
-                key={index}
-              >
+                key={index}>
                 {item.name}
               </li>
             );

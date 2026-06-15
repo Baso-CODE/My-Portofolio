@@ -1,5 +1,3 @@
-import React from "react";
-
 // import brnds data
 
 import { brands } from "../data";

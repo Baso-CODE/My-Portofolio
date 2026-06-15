@@ -1,5 +1,3 @@
-import React from "react";
-
 // import services data
 import { services } from "../data";
 
